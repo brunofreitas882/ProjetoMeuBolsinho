@@ -4,7 +4,7 @@ const enum tipos {
     Livros = "Livros",
     Transporte = "Transporte",
     Material_didático = "Material didático"
-}
+};
 
 // Mapeamento do enum tipos.
 const tiposMap: { [key: string]: tipos } = {
@@ -27,8 +27,8 @@ function cadastrarDespesas() {
             valorSelecionado = radioButton.value;
             tipoSelecionado = tiposMap[valorSelecionado];
             break;
-        }
-    }
+        };
+    };
 
     // Obtenha o valor do input do id "descricao"
     let descricaoHTML: HTMLInputElement = document.getElementById("descricao") as HTMLInputElement;
@@ -44,7 +44,7 @@ function cadastrarDespesas() {
     let valorDate: string = inputDateElement.value;
 
     validacao(valorSelecionado, descricao, valor, valorDate);
-}
+};
 
 //faz uma validaçao dos campos  
 function validacao(tipoSelecionado: string, descricao: string, valor: number, valorDate: string) {
@@ -61,25 +61,26 @@ function validacao(tipoSelecionado: string, descricao: string, valor: number, va
             alert("Voce deve informar um valor maior que 0!");
         } else if (valorDate == "") {
             alert("Voce deve informar uma data completa!");
-        }
+        };
 
-    }
+    };
 
-}
+};
 
 //adciona as informacoes ao registro
 function adicionarAoRegistro(tipo: string, descricao: string, valor: number, date: string) {
     //limpa os campos informados
     let descricaoHTML: HTMLInputElement = document.getElementById("descricao") as HTMLInputElement;
-    descricaoHTML.value = ''
+    descricaoHTML.value = '';
 
     let valorHTML = document.getElementById("valor") as HTMLInputElement;
-    valorHTML.value = ''
+    valorHTML.value = '';
 
     let inputDateElement: HTMLInputElement = document.getElementById("data") as HTMLInputElement;
-    inputDateElement.value = ''
+    inputDateElement.value = '';
 
 
     //exibi no console as informacoes, logo mais guarda no registro em uma lista
-    console.log(`O tipo é ${tipo}, Descrição: ${descricao} valor: ${valor} data: ${date}`)
-}
+    console.log(`tipo: ${tipo}, Descrição: ${descricao}, valor: ${valor}, data: ${date}`);
+    alert(`tipo: ${tipo}, Descrição: ${descricao}, valor: ${valor}, data: ${date}`);
+};
