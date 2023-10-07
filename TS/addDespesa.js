@@ -1,4 +1,5 @@
 "use strict";
+;
 // Mapeamento do enum tipos.
 const tiposMap = {
     "Lanches": "Lanches" /* tipos.Lanches */,
@@ -19,7 +20,9 @@ function cadastrarDespesas() {
             tipoSelecionado = tiposMap[valorSelecionado];
             break;
         }
+        ;
     }
+    ;
     // Obtenha o valor do input do id "descricao"
     let descricaoHTML = document.getElementById("descricao");
     let descricao = descricaoHTML.value;
@@ -32,6 +35,7 @@ function cadastrarDespesas() {
     let valorDate = inputDateElement.value;
     validacao(valorSelecionado, descricao, valor, valorDate);
 }
+;
 //faz uma validaçao dos campos  
 function validacao(tipoSelecionado, descricao, valor, valorDate) {
     //Faz uma comparacao nos campos para ver se nao estao vazios ou indefinidos.
@@ -51,8 +55,11 @@ function validacao(tipoSelecionado, descricao, valor, valorDate) {
         else if (valorDate == "") {
             alert("Voce deve informar uma data completa!");
         }
+        ;
     }
+    ;
 }
+;
 //adciona as informacoes ao registro
 function adicionarAoRegistro(tipo, descricao, valor, date) {
     //limpa os campos informados
@@ -63,5 +70,7 @@ function adicionarAoRegistro(tipo, descricao, valor, date) {
     let inputDateElement = document.getElementById("data");
     inputDateElement.value = '';
     //exibi no console as informacoes, logo mais guarda no registro em uma lista
-    console.log(`O tipo é ${tipo}, Descrição: ${descricao} valor: ${valor} data: ${date}`);
+    console.log(`tipo: ${tipo}, Descrição: ${descricao}, valor: ${valor}, data: ${date}`);
+    alert(`tipo: ${tipo}, Descrição: ${descricao}, valor: ${valor}, data: ${date}`);
 }
+;
