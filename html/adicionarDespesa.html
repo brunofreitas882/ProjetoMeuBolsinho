@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/adicionarDespesa.css">
+    <title>CADASTRAR DESPESAS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Projeto Meu Bolsinho</h1>
+    </header>
+    <main>
+        <section class="menu">
+            <a href="../index.html">HOME</a>
+            <a href="adicionarDespesa.html" id="adicionarDespesa">CADASTRAR DESPESAS</a>
+            <a href="#">MODIFICAR DESPESA</a>
+            <a href="#">RELATÓRIO UNIFICADO</a>
+            <a href="#">RELATÓRIO DETALHADO</a>
+        </section>
+        <section class="conteudo">
+            <form id="formulario">
+                <div class="campoDespesa">
+                    <div class="radio-inputs">Tipos: 
+                        <label class="radio" >
+                            <input class="tipo" type="radio" name="tipo" value="Lanches" checked>
+                            <span class="name">Lanches</span>
+                        </label>
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Livros"> 
+                            <span class="name">Livros</span>
+                        </label>
+
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Transporte">
+                            <span class="name">Transporte</span>
+                        </label>
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Material didático">
+                            <span class="name">Material didático</span>
+                        </label>                       
+                    </div>
+                </div>
+                <div class="campoDespesa">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" id="descricao"  placeholder="Coxinha e Refrigerante">
+                </div>
+                <div class="campoDespesa">
+                    <label for="valor">Valor</label>
+                    <input type="number" name="valor" id="valor"  min="0" placeholder="R$: 12.00">
+                </div>
+                <div class="campoDespesa">
+                    <label for="data">Data</label>
+                    <input type="date" name="data" id="data" >
+                </div>
+                <div class="campoDespesa">
+                     <button type="button" onclick="adicionarAoRegistro()">Adicionar ao registro</button>
+                </div>
+            </form>
+        </section>
+        <section class="registro">
+
+        </section>
+    </main>
+    <script src="../TS/addDespesa.js"></script>
+</body>
+
+</html>
