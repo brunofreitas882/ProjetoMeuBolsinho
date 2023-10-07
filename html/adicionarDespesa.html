@@ -46,18 +46,18 @@
                 </div>
                 <div class="campoDespesa">
                     <label for="descricao">Descrição</label>
-                    <input type="text" name="descricao" id="descricao"  placeholder="Coxinha e Refrigerante">
+                    <input type="text" name="descricao" id="descricao"  placeholder="Coxinha e Refrigerante" required>
                 </div>
                 <div class="campoDespesa">
                     <label for="valor">Valor</label>
-                    <input type="number" name="valor" id="valor"  min="0" placeholder="R$: 12.00">
+                    <input type="number" name="valor" id="valor" min="0" placeholder="R$: 12.00" >
                 </div>
                 <div class="campoDespesa">
                     <label for="data">Data</label>
-                    <input type="date" name="data" id="data" >
+                    <input type="date" name="data" id="data" required>
                 </div>
                 <div class="campoDespesa">
-                     <button type="button" onclick="adicionarAoRegistro()">Adicionar ao registro</button>
+                     <button type="button" onclick="cadastrarDespesas()">Adicionar ao registro</button>
                 </div>
             </form>
         </section>
