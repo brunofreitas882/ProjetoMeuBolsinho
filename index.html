@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/home.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="CSS/relatorioUnificado.css">
+    <title>RELATÓRIO UNIFICADO</title>
 </head>
 
 <body>
@@ -15,13 +15,35 @@
     </header>
     <main>
         <section class="menu">
-            <a href="index.html" id="home">HOME</a>
             <a href="html/adicionarDespesa.html">CADASTRAR DESPESAS</a>
-            <a href="#">MODIFICAR DESPESA</a>
-            <a href="#">RELATÓRIO UNIFICADO</a>
-            <a href="#">RELATÓRIO DETALHADO</a>
+            <a href="index.html" id="relatorioUnificado">RELATÓRIO UNIFICADO</a>
+            <a href="html/relatorioDetalhado.html">RELATÓRIO DETALHADO</a>
         </section>
         <section class="conteudo">
+                <div class="campoDespesa">
+                    <div class="radio-inputs">Tipos:
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Lanches" checked>
+                            <span class="name">Lanches</span>
+                        </label>
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Livros">
+                            <span class="name">Livros</span>
+                        </label>
+        
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Transporte">
+                            <span class="name">Transporte</span>
+                        </label>
+                        <label class="radio">
+                            <input class="tipo" type="radio" name="tipo" value="Material didático">
+                            <span class="name">Material didático</span>
+                        </label>
+                    </div>
+                </div>
+        </section>
+        <section class="registro">
+        
         </section>
     </main>
 </body>
